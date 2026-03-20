@@ -1,4 +1,4 @@
-name: Test Project #to RUN UNIT TEST IN NODE JS PROJECT
+name: Nodejs Dummy Project #to RUN UNIT TEST IN NODE JS PROJECT
 on: push
 jobs:
   test: 
@@ -17,7 +17,7 @@ jobs:
       - name: Run test 
         run: npm test
   deploy:  #added multiple jobs 
-    needs: test
+    needs: test   #to run jobs sequentially i.e. deploy jobs trigger only after test job gets completed
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
