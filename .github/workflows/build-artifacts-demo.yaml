@@ -32,6 +32,14 @@ jobs:
 
       - name: Build
         run: npm run build
+        
+      - name: Upload Artifacts   #we are storing artifacts at dist folder 
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-files
+          path: |
+            dist
+            package.json
 
       - name: Deploy #we don't have any server to deploy this so we are just doing echo
         run: echo "Deploying ..."
