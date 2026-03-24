@@ -1,5 +1,5 @@
 name: Nodejs Dummy Project #to RUN UNIT TEST IN NODE JS PROJECT
-on: push
+on: workflow_dispatch
 jobs:
   test: 
     runs-on: ubuntu-latest
